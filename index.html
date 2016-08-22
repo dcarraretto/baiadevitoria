@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE>Memória Visual da Baía de Vitória</TITLE>
+<META NAME="Generator" CONTENT="">
+<META NAME="Author" CONTENT="?">
+<META NAME="Keywords" CONTENT="?">
+<META NAME="Description" CONTENT="?">
+</HEAD>
+
+		<style type="text/css"><!--
+#aempresalayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }
+#artigoslayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }
+#clienteslayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }
+#contatolayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }
+#defaultlayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }
+#indicelayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }
+#solucoeslayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }
+#cdromlayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }
+#internetlayer { position: absolute; z-index: 1; top: 0px; left: 0px; visibility: hidden }-->
+		</style>
+	</head>
+
+	<script language="JavaScript">
+function Is() {
+    var agent = navigator.userAgent.toLowerCase();
+    this.major = parseInt(navigator.appVersion);
+    this.minor = parseFloat(navigator.appVersion);
+    this.ns  = ((agent.indexOf('mozilla')!=-1) && ((agent.indexOf('spoofer')==-1) && (agent.indexOf('compatible') == -1)));
+    this.ns2 = (this.ns && (this.major == 2));
+    this.ns3 = (this.ns && (this.major == 3));
+    this.ns4b = (this.ns && (this.minor < 4.04));
+    this.ns4 = (this.ns && (this.major >= 4));
+    this.ie   = (agent.indexOf("msie") != -1);
+    this.ie3  = (this.ie && (this.major == 2));
+    this.ie4  = (this.ie && (this.major >= 4));
+    this.op3 = (agent.indexOf("opera") != -1);
+}
+var is = new Is();
+if(is.ns4) {
+    doc = "document";
+    sty = "";
+    htm = ".document"
+    xpos = "e.contentX";
+    ypos = "e.contentY";
+} else if(is.ie4) {
+    doc = "document.all";
+    sty = ".style";
+    htm = ""
+    xpos = "event.x";
+    ypos = "event.y";
+} else  {
+    alert("Este site utiliza recursos disponíveis nas versões 4.0 do Internet Explorer e Netscape Navigator. Verifique se o seu browser é adequado")
+ }
+function layerSetup() {
+	fundoLyr = eval(doc + '["FundoAbert"]' + sty);
+	fundoLyr.left = available_width/2 - 340;
+	fundoLyr.top = available_height/2 - 205;
+	fundoLyr.visibility = "visible"
+
+	mundoLyr = eval(doc + '["MundoAbert"]' + sty);
+	mundoLyr.left = available_width/2 + 165;
+	mundoLyr.top = available_height/2 + 35;
+	mundoLyr.visibility = "visible"
+
+	textoLyr = eval(doc + '["TextoAbert"]' + sty);
+	textoLyr.left = available_width/2 + 205;
+	textoLyr.top = available_height/2 - 175;
+	textoLyr.visibility = "visible"
+
+	texto2Lyr = eval(doc + '["Texto2Abert"]' + sty);
+	texto2Lyr.left = available_width/2 - 320;
+	texto2Lyr.top = available_height/2 + 160;
+	texto2Lyr.visibility = "visible"
+
+	pontoLyr = eval(doc + '["Ponto"]' + sty);
+	pontoLyr.left = available_width/2 + 218;
+	pontoLyr.top = available_height/2 + 114;
+	pontoLyr.visibility = "visible"
+
+	interLyr = eval(doc + '["Internet"]' + sty);
+	interLyr.left = available_width/2 + 235;
+	interLyr.top = available_height/2 - 25;
+	interLyr.visibility = "visible"
+
+	cdromLyr = eval(doc + '["Cdrom1"]' + sty);
+	cdromLyr.left = available_width/2 + 235;
+	cdromLyr.top = available_height/2 - 75;
+	cdromLyr.visibility = "visible"
+
+}
+
+
+function Inicio(){
+	if(is.ns4) {
+		available_width=innerWidth;
+		available_height=innerHeight;
+		layerSetup();
+
+		document.captureEvents(Event.KEYDOWN);
+		} else if(is.ie4) {
+			available_width=document.body.clientWidth;
+			available_height=document.body.clientHeight;
+			layerSetup();
+
+		}
+		if (available_width <= 640) {
+		   alert("É imprescindível ajustar a resolução de vídeo para um valor maior que 640x480!")
+		   }
+	}
+
+
+<!--bgcolor="#19fd73"-->
+</script>
+
+<BODY bgcolor="black" onload="Inicio()" onResize="Javascript:history.go(0)" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" TEXT="#000000" LINK="#FF0000" VLINK="#800000" ALINK="#FF00FF">
+<DIV ID="FundoAbert" STYLE="position: absolute; z-index: 1;left: 0; top: 0;visibility: hidden;">
+	   <IMG NAME="backImagFundo" SRC="abertura/fundo.jpg" BORDER="0" alt="">
+</DIV>
+<DIV ID="MundoAbert" STYLE="position: absolute; z-index: 2;left: 0; top: 0;visibility: hidden;">
+	   <IMG NAME="ImagMundo" SRC="abertura/mundo.jpg" BORDER="0" alt="">
+</DIV>
+<DIV ID="TextoAbert" STYLE="position: absolute; z-index: 2;left: 0; top: 0;visibility: hidden;">
+	   <IMG NAME="Imagtexto" SRC="abertura/texto.gif" BORDER="0" alt="">
+</DIV>
+<DIV ID="Texto2Abert" STYLE="position: absolute; z-index: 2;left: 0; top: 0;visibility: hidden;">
+	   <IMG NAME="Imagtexto2" SRC="abertura/texto2.gif" BORDER="0" alt="">
+</DIV>
+
+<DIV ID="Ponto" STYLE="position: absolute; z-index: 3;left: 0; top: 0;visibility: hidden;">
+	   <IMG NAME="ImagPonto" SRC="abertura/anima.gif" BORDER="0" alt="">
+</DIV>
+
+<DIV ID="Cdrom1" STYLE="position: absolute; z-index: 3;left: 0; top: 0;visibility: hidden;">
+	   <a href="inicio.html"><IMG NAME="Cdrom" SRC="abertura/Cdrom.jpg" BORDER="0" alt="Clique para visitar o site no CD"></a>
+</DIV>
+
+<DIV ID="Internet" STYLE="position: absolute; z-index: 3;left: 0; top: 0;visibility: hidden;">
+	   <a href="http://www.baiadevitoria.ufes.br/inicio.html"><IMG NAME="internet" SRC="abertura/arroba.jpg" BORDER="0" alt="Clique para visitar o site na Internet"></a>
+</DIV>
+</BODY>
+</HTML>
